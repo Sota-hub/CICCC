@@ -8,3 +8,9 @@ Make new branch on either branch
 -> erase top, middle, under double line 
 -> confirm changes 
 -> git add & commit
+
+==========================
+How to use .gitignore file
+==========================
+write file names not to be tracked by git
+e.g) .DS_store
