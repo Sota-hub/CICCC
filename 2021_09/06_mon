@@ -1,0 +1,10 @@
+===========================
+How to resolve the conflict
+===========================
+
+Make new branch on either branch 
+-> git merge <another-branch> 
+->conflict happen 
+-> erase top, middle, under double line 
+-> confirm changes 
+-> git add & commit
