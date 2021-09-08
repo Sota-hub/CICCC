@@ -1,3 +1,7 @@
+// ===========
+// Constructor
+// ===========
+
 const Car = function(make, speed) {
   this.make = make;
   this.speed = speed;
@@ -24,4 +28,24 @@ EV.prototype = Object.create(Car.prototype);
 // Porymophism
 EV.prototype.accelarate = function() {
   this.speed += 20;
+}
+
+// ===
+// ES6
+// ===
+
+class CarCl {
+  constructor(make, speed) {
+    this.make = make;
+    this.speed = speed;
+  }
+}
+
+// extends -> link to CarCl = Object.create()
+class EVCl extends CarCl {
+  constructor(make, speed, charge) {
+    // super() -> it's contents of CarCl constructor
+    super(make, speed);
+    this.charge = charge;
+  }
 }
