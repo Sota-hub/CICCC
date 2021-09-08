@@ -1,7 +1,6 @@
 // ===========
 // Constructor
 // ===========
-
 const Car = function(make, speed) {
   this.make = make;
   this.speed = speed;
@@ -33,7 +32,6 @@ EV.prototype.accelarate = function() {
 // ===
 // ES6
 // ===
-
 class CarCl {
   constructor(make, speed) {
     this.make = make;
@@ -49,3 +47,24 @@ class EVCl extends CarCl {
     this.charge = charge;
   }
 }
+
+// =============
+// Object.create
+// =============
+const CarPro = {
+  info(make, speed) {
+    this.make = make;
+    this.speed = speed;
+  }
+}
+
+const EVPro = Object.create(CarPro);
+EVPro.info = function(make, speed, charge) {
+  CarPro.info.call(this, make, speed);
+  this.charge = charge;
+}
+
+// Need to make a link to EVPro
+const toyota = Object.create(EVPro);
+toyota.info('Toyota', 80, 80);
+console.log(toyota);
