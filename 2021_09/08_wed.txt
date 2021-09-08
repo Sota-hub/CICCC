@@ -3,3 +3,12 @@ Make another branch going back to past commit
 =============================================
 git checkout <commit-cord>
 -> git switch -c <branch-name>
+
+======================================================
+Reflect changes on another branch with plain git reset
+(keep master branch unchanged)
+======================================================
+git reset <commit-code>
+->git switch -c bad_stuff
+-> git commit -am “”
+->git switch master
