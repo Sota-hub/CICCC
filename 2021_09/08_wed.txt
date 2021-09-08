@@ -1,0 +1,5 @@
+=============================================
+Make another branch going back to past commit
+=============================================
+git checkout <commit-cord>
+-> git switch -c <branch-name>
